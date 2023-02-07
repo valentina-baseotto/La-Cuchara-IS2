@@ -1,0 +1,2 @@
+Aqui van a ir todos los diagramas en formato .jpg
+Llamar a los archivos de la siguiente manera si es de un subsistema: NOMBRESUBSISTEMA_nombreFuncion.jpg

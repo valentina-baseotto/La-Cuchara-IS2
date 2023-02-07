@@ -1,0 +1,3 @@
+Aqui van los proyecto en formato .zip de Modelio o donde sea que se han hecho los diagramas
+Si se ha hecho un proyecto de un subsistema llamarlo de la siguiente forma : NOMBRESUBSISTEMA.zip 
+Si el proyecto solo contiene una funcion de un subsitema llamarlo de la siguiente forma: NOMBRESUBSISTEMA_nombrefuncion.zip
