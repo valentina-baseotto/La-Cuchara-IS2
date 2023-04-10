@@ -15,7 +15,6 @@ import javax.swing.*;
 import javax.swing.border.Border;
 
 import Usuarios.Usuario;
-import Utils.RoundedButton;
 
 public class GUIPerfil extends JFrame{
 
@@ -140,11 +139,7 @@ public class GUIPerfil extends JFrame{
 	    });
 		
 		 middlePanel = new JPanel(new GridLayout(panels.length,1));
-		
-		
-		
 
-		// Agrega los componentes a los paneles correspondientes usando un bucle y un enumerado
 			for (int i = 0; i < panels.length; i++) {
 			    panels[i].add(labels[i]);
 			    JPanel blue = new JPanel();
@@ -155,35 +150,24 @@ public class GUIPerfil extends JFrame{
 			    
 			}
 
-		// Agrega los paneles al panel central
-		//middlePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
 		for (JPanel panel : panels) {
 		    middlePanel.add(panel);
 		}
 
 		middlePanel.setAlignmentX(CENTER_ALIGNMENT);
 		middlePanel.setMaximumSize(new Dimension(500, 1000));
-		//middlePanel.setMinimumSize(new Dimension(500, 1000));
+
 		
 		JScrollPane scroll = new JScrollPane(middlePanel);
 		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		
 		scroll.setAlignmentX(CENTER_ALIGNMENT);
 		scroll.setMaximumSize(new Dimension(500, 1000));
-		//scroll.setMinimumSize(new Dimension(500, 1000));
+
 		
 		_profilePanel.add(scroll);
 		
-		/*for (int i = 0; i < 9; i++) {
-		    if (i == 4) {
-		        _profilePanel.add(middlePanel);
-		    } else {
-		        JPanel rellenable = new JPanel();
-		        rellenable.setOpaque(false);
-		        _profilePanel.add(rellenable);
-		    }
-		}*/
-		
+		_profilePanel.setBackground(new Color(158, 173, 175));
 		
 		return _profilePanel;
 

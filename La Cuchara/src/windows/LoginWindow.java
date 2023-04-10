@@ -2,13 +2,17 @@ package windows;
 
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Locale;
 import java.awt.Dimension;
+import java.awt.Font;
 
 import javax.swing.BorderFactory;
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -20,8 +24,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import Cuchara.Controller;
+import Exceptions.NullException;
 import Usuarios.Usuario;
-import Utils.RoundedButton;
 
 public class LoginWindow extends JFrame {
 
@@ -41,8 +45,7 @@ public class LoginWindow extends JFrame {
 	}
 
 	private void initGUI() {
-		// ConfiguraciÛn de la ventana
-		setTitle("Iniciar sesiÛn");
+		setTitle("Iniciar sesi√≥n");
 		setSize(650, 400);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -53,48 +56,50 @@ public class LoginWindow extends JFrame {
 		window.add(login, "Login");
 		window.add(register, "Register");
 
-		// Agregar panel a la ventana
 		add(window);
 		CardLayout cardLayout = (CardLayout) window.getLayout();
 		cardLayout.show(window, "Login");
 		this.setBackground(new Color(70, 198, 226));
 
-		// Hacer visible la ventana
 		setVisible(true);
 	}
 
 	private JPanel initRegister() {
 		JLabel[] labels = new JLabel[5];
 		JTextField[] textFields = new JTextField[5];
-		RoundedButton registerButton;
+		JButton registerButton;
 
 		JPanel mainPanel = new JPanel() {
 			@Override
 			protected void paintComponent(Graphics g) {
 				super.paintComponent(g);
-				ImageIcon image = new ImageIcon("src/Cuchara/fondo.png"); // Ruta de la imagen
+				ImageIcon image = new ImageIcon("src/Cuchara/fondo.png");
 				g.drawImage(image.getImage(), 0, 0, getWidth(), getHeight(), null);
 			}
 		};
+		mainPanel.setBackground(new Color(224, 232, 232));
 
-		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
-		// CreaciÛn de componentes
+		mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
+
 
 		labels[0] = new JLabel("Usuario:");
-		labels[1] = new JLabel("ContraseÒa:");
+		labels[1] = new JLabel("Contrase√±a:");
 		labels[2] = new JLabel("Nombre:");
 		labels[3] = new JLabel("Mail:");
 		labels[4] = new JLabel("Telefono:");
-		registerButton = new RoundedButton("Crear Cuenta", new Color(22, 146, 138));
+		registerButton = new JButton("Crear Cuenta");
+		registerButton.setBackground(new Color(22, 146, 138));
 
-		// AÒadir componentes al panel
 		JPanel registerPanel = new JPanel(new GridLayout(6, 1));
+		registerPanel.setBackground(new Color(224, 232, 232));
 		JPanel[] panels = new JPanel[5];
 		int i = 0;
 		for (JPanel p : panels) {
 			p = new JPanel();
+			p.setBackground(new Color(224, 232, 232));
 			p.setLayout(new GridLayout(1, 2));
 			p.add(labels[i]);
+			p.setBorder(BorderFactory.createBevelBorder(1));
 			textFields[i] = new JTextField();
 			p.add(textFields[i]);
 			i++;
@@ -107,9 +112,12 @@ public class LoginWindow extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
+
+					if(textFields[2].getText().equalsIgnoreCase("") || textFields[3].getText().equalsIgnoreCase("") || textFields[0].getText().equalsIgnoreCase("") || textFields[1].getText().equalsIgnoreCase("")) {
+						throw new NullException();
+					}
 					Usuario u = new Usuario(textFields[2].getText(), textFields[3].getText(), textFields[0].getText(),
 							Integer.parseInt(textFields[4].getText()), textFields[1].getText());
-
 					if (controller.addUser(u)) {
 						dispose();
 						controller.openApp(u.getID());
@@ -117,21 +125,39 @@ public class LoginWindow extends JFrame {
 
 				} catch (NumberFormatException f) {
 					JOptionPane.showMessageDialog(registerPanel, "Formato del numero de telefono incorrecto");
+				} catch(NullException h) {
+					JOptionPane.showMessageDialog(registerPanel, "Campos vacios");
 				}
 			};
 		});
 
+		JButton volver = new JButton("‚Üê");
+		volver.setFont(new Font("Serif", Font.BOLD, 10));
+		volver.setMaximumSize(new Dimension(50, 20));
+		
+		volver.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				CardLayout cardLayout = (CardLayout) window.getLayout();
+				cardLayout.show(window, "Login");
+			};
+		});
+		
+		mainPanel.add(volver);
+		mainPanel.add(Box.createGlue());
+		
+		registerPanel.setAlignmentY(Component.TOP_ALIGNMENT);
 		registerPanel.setAlignmentX(CENTER_ALIGNMENT);
 		registerPanel.setMaximumSize(new Dimension(200, 600));
 		
 		mainPanel.add(registerPanel);
+		mainPanel.add(Box.createGlue());
 
 		
 
 		return mainPanel;
 	}
 
-	// INICIA EL LOGIN DE LA APLICACION
 	public JPanel initLogin() {
 		JLabel userLabel, passwordLabel;
 		JTextField userTextField;
@@ -143,20 +169,22 @@ public class LoginWindow extends JFrame {
 			@Override
 			protected void paintComponent(Graphics g) {
 				super.paintComponent(g);
-				ImageIcon image = new ImageIcon("src/Cuchara/fondo.png"); // Ruta de la imagen
+				ImageIcon image = new ImageIcon("src/Cuchara/fondo.png");
 				g.drawImage(image.getImage(), 0, 0, getWidth(), getHeight(), null);
 			}
 		};
-		// CreaciÛn de componentes
+
 		userLabel = new JLabel("Usuario:");
-		passwordLabel = new JLabel("ContraseÒa:");
+		passwordLabel = new JLabel("Contrase√±a:");
 		userTextField = new JTextField();
 		passwordField = new JPasswordField();
-		loginButton = new RoundedButton("Ingresar", Color.GREEN);
-		cancelButton = new RoundedButton("Cancelar", Color.RED);
-		registerButton = new RoundedButton("Crear Cuenta", new Color(22, 146, 138));
+		loginButton = new JButton("Ingresar");
+		loginButton.setBackground(new Color(68, 184, 28));
+		cancelButton = new JButton("Cancelar");
+		cancelButton.setBackground(new Color(193, 28, 28));
+		registerButton = new JButton("Crear Cuenta");
+		registerButton.setBackground(new Color(22, 146, 138));
 
-		// AÒadir componentes al panel
 		loginPanel = new JPanel(new GridLayout(4, 1));
 		JPanel usuario = new JPanel(new GridLayout(1, 2));
 		JPanel password = new JPanel(new GridLayout(1, 2));
@@ -174,7 +202,6 @@ public class LoginWindow extends JFrame {
 		loginPanel.add(registerButton);
 		loginPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
 
-		// Agregar eventos a los botones
 		loginButton.addActionListener(new ActionListener() {
 
 			String user = userTextField.getText();
@@ -186,7 +213,7 @@ public class LoginWindow extends JFrame {
 					controller.openApp(userTextField.getText());
 					dispose();
 				} else {
-					JOptionPane.showMessageDialog(new JPanel(), "Usuario o contraseÒa incorrectos ");
+					JOptionPane.showMessageDialog(new JPanel(), "Usuario o contraseÔøΩa incorrectos ");
 				}
 			}
 
@@ -218,6 +245,8 @@ public class LoginWindow extends JFrame {
 				mainPanel.add(aux);
 			}
 		}
+		mainPanel.setBackground(new Color(224, 232, 232));
+		
 		return mainPanel;
 	}
 
