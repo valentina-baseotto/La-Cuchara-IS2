@@ -84,9 +84,9 @@ public class FachadaSAOfertaImpl implements IFachadaSAOferta {
 	}
 	
 	/**
-	 * 
-	 * @param
-	 * @return 
+	 * Busca una Oferta que comience por las letras que le introduces
+	 * @param localStrt las letras hacen de filtro 
+	 * @return una lista de objetos Oferta que muestra las ofertas que cumplen la condicion
 	 */
 	@Override
 	public List<Oferta> searchLocalLike(String localStrt){
