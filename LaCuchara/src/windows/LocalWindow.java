@@ -26,8 +26,8 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 
 /**
+Esta clase representa la interfaz grafica para consultar un Local
 
-This class represents the graphical user interface for consulting a Local.
 */
 
 public class LocalWindow extends JPanel {

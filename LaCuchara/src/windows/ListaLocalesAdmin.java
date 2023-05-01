@@ -40,6 +40,11 @@ import java.awt.Dimension;
 import java.awt.BorderLayout;
 import java.awt.Color;
 
+/**
+ * En esta clase se implementa la interfaz grafica que muestra una lista de locales, este panel solo esta disponible para el Administrador
+ * 
+ *
+ */
 public class ListaLocalesAdmin extends JPanel {
 	private JTable table;
 	private int row = 0;
@@ -249,12 +254,19 @@ public class ListaLocalesAdmin extends JPanel {
 		setLayout(groupLayout);
 
 	}
-
+	
+	/**
+	 * Mantiene actualizada la tabla 
+	 */
 	void actualizarTabla() {
 		List<Local> _Local = _c.getListLocales(0);
 		actualizarTabla(_Local);
 	}
-
+	
+	/**
+	 * Actualiza la informacion de la tabla
+	 * @param _Local se ponen los datos de esta lista en la tabla
+	 */
 	void actualizarTabla(List<Local> _Local){
 		DefaultTableModel dft = (DefaultTableModel) table.getModel();
 

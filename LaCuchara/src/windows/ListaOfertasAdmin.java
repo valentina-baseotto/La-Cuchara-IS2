@@ -39,6 +39,11 @@ import java.awt.Dimension;
 import java.awt.BorderLayout;
 import java.awt.Color;
 
+/**
+ * Clase que define un panel que muestra una lista de ofertas y permite abrir la ventana de la oferta seleccionada.
+ * 
+ *  
+ */
 public class ListaOfertasAdmin extends JPanel {
 	private JTable table;
 	private int row = 0;
@@ -47,6 +52,7 @@ public class ListaOfertasAdmin extends JPanel {
 
 	/**
 	 * Create the panel.
+	 * @param cotroller controlador del programa
 	 */
 	public ListaOfertasAdmin(Controller controller) {
 		_c = controller;

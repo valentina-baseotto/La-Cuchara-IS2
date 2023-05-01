@@ -35,8 +35,8 @@ import javax.swing.SwingConstants;
 
 
 /**
-
-Clase que define un panel que muestra una lista de locales y permite abrir la ventana de un local seleccionado.
+*
+*Clase que define un panel que muestra una lista de locales y permite abrir la ventana de un local seleccionado.
 */
 
 public class ListaLocalesPanel extends JPanel {

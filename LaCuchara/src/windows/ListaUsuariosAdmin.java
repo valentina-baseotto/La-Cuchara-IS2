@@ -44,6 +44,11 @@ import java.awt.Dimension;
 import java.awt.BorderLayout;
 import java.awt.Color;
 
+/**
+ * 
+ * Esta clase representa en la interfaz grafica de una Lista de Usuario, esta tabla solo es visible para el Administrador
+ *
+ */
 public class ListaUsuariosAdmin extends JPanel {
 	private JTable table;
 	private int row = 0;
@@ -52,6 +57,7 @@ public class ListaUsuariosAdmin extends JPanel {
 
 	/**
 	 * Create the panel.
+	 * @param controller El controlador del sistema
 	 */
 	public ListaUsuariosAdmin(Controller controller) {
 		_c = controller;

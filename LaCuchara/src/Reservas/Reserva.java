@@ -125,6 +125,10 @@ public class Reserva implements Reserva_interface {
 		_ID = ID;
 	}
 	
+	/**
+	 * Devuelve la Fecha
+	 * @return
+	 */
 	public String getFecha(){
 		return fecha;
 	}
