@@ -72,14 +72,22 @@ public class FachadaSAOfertaImpl implements IFachadaSAOferta {
 	public List<Oferta> getList(int orden) {
 		return oferta.getList(orden);
 	}
+	
 	/**
-	 * 
+	 * Comprueba si el id existe en nuestra base de datos
+	 * @param id El id de la Oferta 
+	 * @return true si el ID coincide con una Oferta en la base de datos, false en caso contrario
 	 */
-
 	@Override
 	public boolean check(String id) {
 		return oferta.check(id);
 	}
+	
+	/**
+	 * 
+	 * @param
+	 * @return 
+	 */
 	@Override
 	public List<Oferta> searchLocalLike(String localStrt){
 		return oferta.searchLocalLike(localStrt);
