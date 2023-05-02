@@ -24,11 +24,7 @@ import Ofertas.Oferta;
 import Reservas.Reserva;
 import Usuarios.Usuario;
 
-/**
- * En esta clase se representa la interfaz grafica del subsitema de Usuario para mostrar la informacion del objeto Usuario
- * 
- *
- */
+
 public class GUIPerfil extends JPanel{
 
 	private JLabel nombre, usuario, contrasena, email;

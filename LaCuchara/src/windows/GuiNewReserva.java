@@ -32,7 +32,8 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
 /**
- *Esta clase representa  la interfaz grafica para que se pueda crear una nueva reserva 
+
+This class represents the graphical user interface for creating a new reservation.
 */
 public class GuiNewReserva extends JFrame {
 

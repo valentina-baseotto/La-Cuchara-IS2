@@ -43,11 +43,6 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import Reservas.Reserva;
 
-/**
- * En esta clase implementa la interfaz grafica que muestra una lista de reservas 
- * 
- *
- */
 public class ListaReservasAdmin extends JPanel {
 	private JTable table;
 	private int row = 0;
@@ -56,7 +51,6 @@ public class ListaReservasAdmin extends JPanel {
 
 	/**
 	 * Create the panel.
-	 * @param controller El controlador del sistema
 	 */
 	public ListaReservasAdmin(Controller controller) {
 		_c = controller;

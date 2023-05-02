@@ -28,7 +28,8 @@ import Exceptions.NullException;
 import Usuarios.Usuario;
 
 /**
-Esta clse representa la interfaz grafica para iniciar sesion en la app
+
+This class represents the graphical user interface for Login.
 */
 
 public class LoginWindow extends JFrame {

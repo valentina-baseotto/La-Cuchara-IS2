@@ -21,11 +21,7 @@ import Usuarios.SA.FachadaSAUsuarioImp;
 import Usuarios.SA.IFachadaSAUsuario;
 import windows.AdminPanel;
 import windows.AppWindow;
-/**
- * Esta clase funcionar como el controlador para los 4 subsistemas, es la capa entre las GUIs y el Servicio de Aplicaciones
- * 
- *
- */
+
 public class Controller {
 	
 	private IFachadaSAUsuario usuarios;
@@ -172,12 +168,6 @@ public boolean createofer(Oferta o) {
 	return ofertas.create(o);
 }
 
-/**
- * Funcion para crear una nueva reserva
- * @param o Reserva a crear 
- * @return true si la creacion fue exitosa, false en caso contrario
- */
-
 public boolean createreser(Reserva o) {
 	return reservas.create(o);
 }
@@ -236,11 +226,6 @@ public boolean createreser(Reserva o) {
 		else
 			JOptionPane.showMessageDialog(new JPanel(), "Local eliminado con exito");
 	}
-	
-	/**
-	 * Elimina una Oferta de la base de datos
-	 * @param l Oferta a eliminar 
-	 */
 
 	public void delete(Oferta l) {
 		if(!ofertas.delete(l.getID())) {
@@ -249,12 +234,6 @@ public boolean createreser(Reserva o) {
 		else
 			JOptionPane.showMessageDialog(new JPanel(), "Oferta eliminada con exito");
 	}
-	
-	/**
-	 * Elimina una Reserva de la base de datos
-	 * 
-	 * @param l Reserva a eliminar 
-	 */
 
 	public void delete(Reserva l) {
 		if(!reservas.delete(l.getID())) {
@@ -277,11 +256,6 @@ public boolean createreser(Reserva o) {
 			JOptionPane.showMessageDialog(new JPanel(), "Modificacion exitosa!");
 		
 	}
-	
-	/**
-	 * Modifica un local de la base de datos
-	 * @param l Local a modificar con una nueva informacion a cambiar en la base de datos
-	 */
 
 	public void modifyLocal(Local l){
 		if(!locales.modify(l))
@@ -290,12 +264,6 @@ public boolean createreser(Reserva o) {
 		else
 			JOptionPane.showMessageDialog(new JPanel(), "Modificacion exitosa!");
 	}
-	
-	/**
-	 * Modifica un Usuario de la base de datos
-	 * @param l Usuario a modificar con una nueva informacion a cambiar en la base de datos
-	 */
-	
 	public void modifyUsuario(Usuario l){
 		if(!usuarios.modify(l))
 			JOptionPane.showMessageDialog(new JPanel(), "Modificacion no exitosa");
@@ -304,29 +272,14 @@ public boolean createreser(Reserva o) {
 			JOptionPane.showMessageDialog(new JPanel(), "Modificacion exitosa!");
 	}
 	
-	/**
-	 * Hace una consulta en la base de datos a partir de la clave primaria de Local
-	 * @param nombre ID del local
-	 * @return Local con su informacion 
-	 */
+	
 	public Local consultLocal(String nombre) {
 		return locales.consult(nombre);
 	}
 	
-	/**
-	 * Hace una consulta en la base de datos a partir de la clave primaria de Usuario
-	 * @param nombre IS del Usuario
-	 * @return Usuario con su informacion
-	 */
-	
 	public Usuario consultUsuario(String nombre) {
 		return usuarios.consult(nombre);
 	}
-	
-	/**
-	 * Crea un nuevo Local que no estaba anteriormente en la base de datos
-	 * @param local con la informacion del nuevo local
-	 */
 	
 	public void create(Local local) {
 		if(locales.create(local))
@@ -365,28 +318,14 @@ public boolean createreser(Reserva o) {
 	public List<Oferta> searchOfertaLike(String localStrt){
 		return ofertas.searchLocalLike(localStrt);
 	}
-	/**
-	 * Busca en Local en la base de datos 
-	 * @param local
-	 * @return Lista de locales que cumplen el criterio
-	 */
 	
 	public List<Local> searchLocalLike(String local){
 		return locales.search(local);
 	}
-	/**
-	 * Busca el Usuario en la base de datos
-	 * @param local
-	 * @return Lista de Usuarios que compluen el criterio 
-	 */
 	public List<Usuario> searchUsuarioLike(String local){
 		return usuarios.search(local);
 	}
-	/**
-	 * Buscaen la Reserva en la base de datos
-	 * @param local
-	 * @return Lista de Reservas que complen con el criterio 
-	 */
+
 
 	public List<Reserva> searchReservaLike(String local){
 		return reservas.search(local);

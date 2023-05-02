@@ -21,19 +21,12 @@ import java.awt.Image;
 import java.awt.CardLayout;
 import java.awt.Dimension;
 
-/**
- * 
- * Esta clase implementa el Panel que le sale al Usuario tipo Administrador una vez que inicia sesion
- *
- */
 public class AdminPanel extends JPanel {
 
 	Controller ctrl;
 	JPanel intercambio;
 	/**
 	 * Create the panel.
-	 * @param contoller El Controller se usa para manejar la informacion entre la BBDD
-	 *             y los Inputs
 	 */
 	public AdminPanel(Controller controller) {
 		ctrl = controller;
