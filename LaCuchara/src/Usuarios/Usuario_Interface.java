@@ -1,5 +1,9 @@
 package Usuarios;
 
+/**
+ * Esta clase es la interfaz del Usuario
+ *
+ */
 public interface Usuario_Interface {
 	/**Sets the user's name.
 	* @param name el nombre
@@ -7,7 +11,7 @@ public interface Usuario_Interface {
 	public void setName(String name);
 	
 	/**gets the user's name.
-	
+		
 	*/
 	public String getName();
 	
@@ -22,7 +26,7 @@ public interface Usuario_Interface {
 	public String getMail();
 	
 	/**Sets the user's ID.
-		* @param id la id
+		* @param ID la id
 	*/
 	public void setID(String ID);
 	

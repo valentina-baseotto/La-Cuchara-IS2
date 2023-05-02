@@ -30,17 +30,36 @@ import Cuchara.Controller;
 
 public class AppWindow extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * controller de Controller
+	 */
 	Controller controller;
+	/**
+	 * rightPanelProfile de JPanel
+	 */
 	JPanel rightPanelProfile;
+	/**
+	 * dropdown de JComboBox
+	 */
 	JComboBox<String> dropdown;
+	/**
+	 * ofertasShown tipo boolean
+	 */
 	private boolean ofertasShown;
+	/**
+	 * borrado tipo boolean
+	 */
 	private boolean borrado;
 
 	/**
 	 * 
-	 * construyw una nueva AppWindow object.
+	 * Constructor una nueva AppWindow object.
 	 * 
-	 * @param ctrl El controllaador se usa para manejar la informacion entre la BBDD
+	 * @param controller El Controller se usa para manejar la informacion entre la BBDD
 	 *             y los Inputs
 	 */
 
@@ -163,7 +182,7 @@ public class AppWindow extends JFrame {
 				switchButton.setFont(new Font("Serif", Font.BOLD, 20));
 				borrado = false;
 
-				if(switchButton.getText().equals("←")){
+				if(switchButton.getText().equals("")){
 					usuarioButton.setText("Usuario");
 				}
 
@@ -187,7 +206,7 @@ public class AppWindow extends JFrame {
 				rightPanelProfile = new GUIPerfil(controller);
 				leftPanel.setVisible(false);
 				((CardLayout) rightPanel.getLayout()).show(rightPanel, "rightPanelProfile");
-				switchButton.setText("←");
+				switchButton.setText("");
 				usuarioButton.setText("Borrar");
 				switchButton.setFont(new Font("Serif", Font.BOLD, 40));
 				if (borrado) {

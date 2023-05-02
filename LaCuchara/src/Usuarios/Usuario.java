@@ -8,10 +8,25 @@ import org.json.JSONObject;
  */
 
 public class Usuario implements Usuario_Interface{
+	/**
+	 * Nombre del usuario
+	 */
 	private String _nombre;
+	/**
+	 * el correo electronico del usuario
+	 */
 	private String _mail;
+	/**
+	 * Id que se le otorga al Usuario
+	 */
 	private String _ID;
+	/**
+	 * numero de movil del usuario
+	 */
 	private int _movil;
+	/**
+	 * Contraseña del usuario
+	 */
 	private String _pass;
 	
 	/**
@@ -74,7 +89,7 @@ public class Usuario implements Usuario_Interface{
 	}
 
 	/**Sets the user's ID.
-		* @param id la id
+		* @param ID la id
 	*/
 
 	@Override
@@ -126,6 +141,7 @@ public class Usuario implements Usuario_Interface{
 	}
 
 	/**gets the JSONObject geneated by the parameters
+	 * @return user 
 	*/
 
 	public JSONObject getUsuario() {

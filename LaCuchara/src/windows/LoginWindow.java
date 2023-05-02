@@ -34,7 +34,17 @@ This class represents the graphical user interface for Login.
 
 public class LoginWindow extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * controller tipo Controller
+	 */
 	private Controller controller;
+	/**
+	 * window de JPanel
+	 */
 	private JPanel window;
 	
 	/**
@@ -59,7 +69,7 @@ public class LoginWindow extends JFrame {
 	}
 	/**
 	 * Inicializa las guis de inicio de sesion
-	 * @param c el controlador del programa.
+	 * 
 	 */
 
 
@@ -158,7 +168,7 @@ public class LoginWindow extends JFrame {
 			};
 		});
 
-		JButton volver = new JButton("←");
+		JButton volver = new JButton("");
 		volver.setFont(new Font("Serif", Font.BOLD, 10));
 		volver.setMaximumSize(new Dimension(50, 20));
 		

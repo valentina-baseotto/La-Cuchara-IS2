@@ -18,14 +18,30 @@ import Usuarios.Usuario;
 
 public class DAOUsuariosImpl implements IDAOUsuario {
 	
+	/**
+	 * La URL de conexión a la base de datos MySQL.
+	 */
 	private String url = "jdbc:mySQL://localhost:3306/lacuchara";
+	/**
+	* El nombre de usuario utilizado para conectarse a la base de datos.
+	*/
 	private String usuario = "LaCuchara";
+	/**
+	 * La contraseña utilizada para conectarse a la base de datos.
+	 */
 	private String pass = "LaCuchara";
+	/**
+	 * Una conexión a la base de datos.
+	 */
 	private Connection con;
+	/**
+	* Un objeto de declaración SQL utilizado para ejecutar consultas en la base de datos.
+	*/
 	private Statement stmt;
 
 /**
  * Constructor de la clase que registra el driver JDBC necesario para establecer la conexión con la BBDD.
+ * 
  */
 public DAOUsuariosImpl() {
 	try {

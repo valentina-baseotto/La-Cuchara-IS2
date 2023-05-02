@@ -27,11 +27,11 @@ public class Local implements Local_interface {
 	private String _desc;
 	/**
      * Crea una nueva instancia de la clase Persona.
-     * @param _nombre El nombre del local
-     * @param _direccion La direccion del local
-	 * @param _carta La carta del local
-	 * @param _telefono El telefono del local
-	 * @param _desc La descrippcion del local
+     * @param nombre El nombre del local
+     * @param dir La direccion del local
+	 * @param carta La carta del local
+	 * @param tel El telefono del local
+	 * @param desc La descrippcion del local
      */
 	public Local(String nombre, String dir, String carta, int tel, String desc) {
 		_nombre = nombre;
@@ -50,7 +50,7 @@ public class Local implements Local_interface {
 	}
 	/**
 	*	introduce la descripcion del local
-	*	@param nombre String con la descripcion
+	*	@param desc
 	*/
 	public void setDescripcion(String desc) {
 		_desc = desc;
@@ -107,7 +107,7 @@ public class Local implements Local_interface {
 	/**
 	*	Introduce un telefono
 	*	@param telefono String del telefono que se quiere añadir
-	*	@throws NumberFormatException() cuando el numero de telefono no es un entero
+	*	
 	*/
 	public void setTelefono(String telefono) {
 		try {

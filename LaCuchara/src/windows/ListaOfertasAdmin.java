@@ -39,14 +39,35 @@ import java.awt.Dimension;
 import java.awt.BorderLayout;
 import java.awt.Color;
 
+/**
+ * Clase que genera la interfaz grafica para mostrar una lista de Ofertas.
+ *
+ */
 public class ListaOfertasAdmin extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * table tipo JTable
+	 */
 	private JTable table;
+	/**
+	 * row tipo integer
+	 */
 	private int row = 0;
+	/**
+	 * col tipo integer
+	 */
 	private int col = 0;
+	/**
+	 * _c tipo Controller
+	 */
 	private Controller _c;
 
 	/**
-	 * Create the panel.
+	 * Constructor de la clase. Crea el panel.
+	 * @param controller tipo Controller 
 	 */
 	public ListaOfertasAdmin(Controller controller) {
 		_c = controller;
@@ -246,11 +267,18 @@ public class ListaOfertasAdmin extends JPanel {
 
 	}
 
+	/**
+	 * Actualiza la tabla
+	 */
 	void actualizarTabla() {
 		List<Oferta> _ofertas = _c.getListOfertas(0);
 		actualizarTabla(_ofertas);
 	}
 
+	/**
+	 * Actualiza la tabla con los datos
+	 * @param _ofertas
+	 */
 	void actualizarTabla(List<Oferta> _ofertas){
 		DefaultTableModel dft = (DefaultTableModel) table.getModel();
 

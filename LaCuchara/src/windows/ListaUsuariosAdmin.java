@@ -44,14 +44,36 @@ import java.awt.Dimension;
 import java.awt.BorderLayout;
 import java.awt.Color;
 
+/**
+ * Esta clase genera la interfaz gráfica para mostrar una lista de Usuarios. Esta solo es visible para el Administrador.
+ *
+ */
 public class ListaUsuariosAdmin extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * table de JTable
+	 */
 	private JTable table;
+	/**
+	 * row tipo integer
+	 */
 	private int row = 0;
+	/**
+	 * col tipo integer
+	 */
 	private int col = 0;
+	/**
+	 * _c tipo Controller
+	 */
 	private Controller _c;
 
+	
 	/**
-	 * Create the panel.
+	 * Constructor de la clase. Crea un panel.
+	 * @param controller
 	 */
 	public ListaUsuariosAdmin(Controller controller) {
 		_c = controller;
@@ -255,11 +277,18 @@ public class ListaUsuariosAdmin extends JPanel {
 
 	}
 
+	/**
+	 * Actualiza la tabla.
+	 */
 	void actualizarTabla() {
 		List<Usuario> _ofertas = _c.getListUsuarios(0);
 		actualizarTabla(_ofertas);
 	}
 
+	/**
+	 * Actualiza la tabla con los datos.
+	 * @param _ofertas
+	 */
 	void actualizarTabla(List<Usuario> _ofertas) {
 		DefaultTableModel dft = (DefaultTableModel) table.getModel();
 

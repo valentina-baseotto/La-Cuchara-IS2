@@ -37,28 +37,28 @@ public interface Reserva_interface {
 	
 	/**
      * Devuelve el ID del local de la reserva.
-     * @param ID el ID del local de la reserva.
+     * @param local el ID del local de la reserva.
      */
 	
 	public void setLocal(String local);
 	
 	/**
      * Devuelve el ID del local de la reserva.
-     * @param ID el ID del local de la reserva.
+     * 
      */
 	
 	public String getLocal();
 	
 	/**
      * Devuelve el ID del usuario de la reserva.
-     * @param ID el ID del usuario de la reserva.
+     * @param usuario 
      */
 	
 	public void setUsuario(String usuario);
 	
 	/**
      * Devuelve el ID del usuario de la reserva.
-     * @param ID el ID del usuario de la reserva.
+     * 
      */
 	
 	public String getUsuario();

@@ -6,8 +6,17 @@ package Ofertas;
  */
 public class Oferta implements Oferta_interface {
 
+	/**
+	 * _descripcion de tipo String, descripcion de lo qe significa la Oferta
+	 */
 	private String _descripcion;
+	/**
+	 * _nombreLocal de tipo String, el nombre del Local del cual pertenece la oferta
+	 */
 	private String _nombreLocal;
+	/**
+	 * _ID de tipo String, el ID unico para cada Oferta para identificarlas
+	 */
 	private String _ID;
 
 	/**

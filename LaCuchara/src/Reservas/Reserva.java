@@ -100,7 +100,7 @@ public class Reserva implements Reserva_interface {
 
 	/**
      * Devuelve el numero de comensales de la Reserva.
-     * @ @param comensales el numero de comensales de la Reserva.
+     * @param comensales 
      */
 
 	public void setComensales(int comensales) {
@@ -109,7 +109,7 @@ public class Reserva implements Reserva_interface {
 
 	/**
      * Devuelve el ID de la Reserva.
-     * @return el ID de la Reserva.
+     * 
 	 */
 
 	public String getID() {
@@ -118,13 +118,17 @@ public class Reserva implements Reserva_interface {
 
 	/**
      * Devuelve el ID de la Reserva.
-     * @ @param ID el ID de la Reserva.
+     * @param ID 
      */
 
 	public void setID(String ID) {
 		_ID = ID;
 	}
 	
+	/**
+	 * Devuelve la fecha
+	 * 
+	 */
 	public String getFecha(){
 		return fecha;
 	}

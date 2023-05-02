@@ -35,7 +35,7 @@ public interface IFachadaSAReserva {
 
 	/**
      * Devuelve si la reserva se ha creado.
-	 * @param reserva la id de la reserva a crear.
+	 * @param r
 	 * @return reservas.create().
      */
 	
@@ -43,7 +43,7 @@ public interface IFachadaSAReserva {
 
 	/**
      * Devuelve la reserva con String reserva.
-	 * @param reserva la reserva a buscar.
+	 * @param r
 	 * @return reservas.search().
      */
 	

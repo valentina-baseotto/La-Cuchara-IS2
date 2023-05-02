@@ -44,9 +44,25 @@ Clase que define un panel que muestra una lista de locales y permite abrir la ve
 */
 
 public class ListaOfertasPanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * tabla de JTable
+	 */
 	private JTable table;
+	/**
+	 * row tipo Integer
+	 */
 	private int row = 0;
+	/**
+	 * col tipo Integer
+	 */
 	private int col = 0;
+	/**
+	 * _c tipo Controller
+	 */
 	Controller _c;
 
 	/**

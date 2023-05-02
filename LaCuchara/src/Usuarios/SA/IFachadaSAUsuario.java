@@ -36,7 +36,7 @@ public interface IFachadaSAUsuario {
 
 	/**
      * Devuelve si el usuario se ha creado.
-	 * @param reserva la id del usuario a crear.
+	 * @param usuario
 	 * @return reservas.create().
      */	
 	
@@ -52,7 +52,7 @@ public interface IFachadaSAUsuario {
 
 	/**
      * Devuelve el usuario con String reserva.
-	 * @param usuario el usuario a buscar.
+	 * @param nombre
 	 * @return reservas.search().
      */	
 	
@@ -60,8 +60,8 @@ public interface IFachadaSAUsuario {
 
 	/**
      * Devuelve la lista de reservas.
-	 * @orden el int del que genera la lista
-	 * @return reservas.getList().
+	 * @param orden
+	 * 
      */
 	
 	public List<Usuario> getList(int orden);

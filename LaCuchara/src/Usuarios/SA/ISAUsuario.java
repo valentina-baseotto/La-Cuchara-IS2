@@ -32,8 +32,8 @@ public interface ISAUsuario {
 
 		/**
      * Devuelve si el usuario se ha creado.
-	 * @param reserva la id del usuario a crear.
-	 * @return reservas.create().
+	 * @param usuario
+	 * 
      */	
 	
 	public boolean create(Usuario usuario);
@@ -48,7 +48,7 @@ public interface ISAUsuario {
 
 	/**
      * Devuelve el usuario con String reserva.
-	 * @param usuario el usuario a buscar.
+	 * @param nombre el usuario a buscar.
 	 * @return reservas.search().
      */	
 	
@@ -57,8 +57,8 @@ public interface ISAUsuario {
 
 	/**
      * Devuelve la lista de reservas.
-	 * @orden el int del que genera la lista
-	 * @return reservas.getList().
+	 * @param orden
+	 * 
      */
 	
 	public List<Usuario> getList(int orden);

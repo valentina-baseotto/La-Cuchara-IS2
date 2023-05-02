@@ -10,6 +10,9 @@ import Ofertas.DAO.IFachadaDAOOferta;
 *	Esta clase implementa la interfaz ISAOferta y proporciona los métodos para realizar operaciones con las ofertas.
 */
 public class SAOfertaImpl implements ISAOferta {
+/**
+ * usuarioDAO de IFachadaDAOOferta
+ */
 private IFachadaDAOOferta usuarioDAO;
 
 /**

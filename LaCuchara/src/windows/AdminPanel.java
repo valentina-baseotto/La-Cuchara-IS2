@@ -21,12 +21,27 @@ import java.awt.Image;
 import java.awt.CardLayout;
 import java.awt.Dimension;
 
+/**
+ * Esta clase crea el Panel principal del Administrador 
+ *
+ */
 public class AdminPanel extends JPanel {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * ctrl de Controller
+	 */
 	Controller ctrl;
+	/**
+	 * intercambio de JPanel
+	 */
 	JPanel intercambio;
 	/**
-	 * Create the panel.
+	 * Conctructor. Create the panel.
+	 * @param controller Tipo Controller
 	 */
 	public AdminPanel(Controller controller) {
 		ctrl = controller;

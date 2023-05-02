@@ -35,16 +35,16 @@ public interface ISAReservas {
 
 	/**
      * Devuelve si la reserva se ha creado.
-	 * @param reserva la id de la reserva a crear.
-	 * @return reservas.create().
+	 * @param r
+	 * 
      */
 	
 	public boolean create(Reserva r);
 
 	/**
      * Devuelve la reserva con String reserva.
-	 * @param reserva la reserva a buscar.
-	 * @return reservas.search().
+	 * @param r
+	 * 
      */
 	
 	public List<Reserva> search(String r);

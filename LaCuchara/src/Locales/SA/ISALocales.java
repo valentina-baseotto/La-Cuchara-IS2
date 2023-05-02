@@ -11,7 +11,7 @@ public interface ISALocales {
 
 	/**
 	*	Modifica un local
-	*	@param local del local que se quiere modificar
+	*	@param Local del local que se quiere modificar
 	*	@return true or false que indica si se ha modificado o no un local
 	*/
 	public boolean modify(Local Local);
@@ -32,22 +32,22 @@ public interface ISALocales {
 
 	/**
 	*	Crea y añade un nuevo Local
-	*	@param local variable tipo Local
+	*	@param Local variable tipo Local
 	*	@return true or false que indica si se puede crear o no un local
 	*/
 	public boolean create(Local Local);
 	
 	/**
 	*	Devuelve una lista con los Locales relacionados con lo que se busca
-	*	@param Local String que se quiere buscar
-	*	@return List<Local> LocalDAO..search(Local) devuelve la lista de los elementos de la busqueda
+	*	@param nombre
+	*	
 	*/
 	public List<Local> search(String nombre);
 	
 	/**
 	*	Devuelve una lista ordenada
 	*	@param orden tipo de orden que quiere obtener
-	*	@return List<Local> LocalDAO.getList(orden) devuelve la lista ordenada
+	*	
 	*/
 	public List<Local> get(int orden);	
 }

@@ -59,7 +59,7 @@ public class SALocalesImpl implements ISALocales {
 	/**
 	*	Devuelve una lista con los Locales relacionados con lo que se busca
 	*	@param Local String que se quiere buscar
-	*	@return List<Local> LocalDAO..search(Local) devuelve la lista de los elementos de la busqueda
+	*	
 	*/
 	@Override
 	public List<Local> search(String Local) {
@@ -68,7 +68,7 @@ public class SALocalesImpl implements ISALocales {
 	/**
 	*	Devuelve una lista ordenada
 	*	@param orden tipo de orden que quiere obtener
-	*	@return List<Local> LocalDAO.getList(orden) devuelve la lista ordenada
+	*	
 	*/
 	@Override
 	public List<Local> get(int orden) {

@@ -13,6 +13,7 @@ public interface IDAOReserva {
 
 	/**
      * Devuelve si la reserva se ha modificado.
+     * @param id identificador
 	 * @return reservas.modify().
      */
 
@@ -36,7 +37,7 @@ public interface IDAOReserva {
 
 	/**
      * Devuelve si la reserva se ha creado.
-	 * @param reserva la id de la reserva a crear.
+	 * @param r Objeto reserva 
 	 * @return reservas.create().
      */
 	
@@ -44,7 +45,7 @@ public interface IDAOReserva {
 
 	/**
      * Devuelve la reserva con String reserva.
-	 * @param reserva la reserva a buscar.
+	 * @param r 
 	 * @return reservas.search().
      */
 	

@@ -33,6 +33,11 @@ This class represents the graphical user interface for consulting a Local.
 public class LocalWindow extends JPanel {
 
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
 	 * Crea el panel para mostrar la informacion del local en cuestion.
 	 * @param l para la variable del local a mostrar
 	 * @param c el controlador del programa.

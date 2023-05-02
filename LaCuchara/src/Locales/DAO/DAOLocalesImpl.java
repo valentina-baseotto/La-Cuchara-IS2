@@ -39,7 +39,7 @@ public class DAOLocalesImpl implements IDAOLocales {
 	
 	/**
 	 * Crea una nueva instancia de DAOLocalesImpl.
-	 * @throws ClassNotFoundException si la clase del controlador JDBC no se encuentra en el classpath.
+	 * 
 	 */
 	public DAOLocalesImpl() {
 		try {
@@ -104,7 +104,7 @@ public class DAOLocalesImpl implements IDAOLocales {
 
 	/**
 	 * Crea un nuevo local en la base de datos.
-	 * @param local El local a crear en la base de datos.
+	 * @param Local El local a crear en la base de datos.
 	 * @return true si el local se crea correctamente, de lo contrario false.
 	 */
 	public boolean create(Local Local) {

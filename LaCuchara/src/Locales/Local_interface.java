@@ -41,12 +41,12 @@ public interface Local_interface {
 	/**
 	*	Introduce un telefono
 	*	@param telefono String del telefono que se quiere añadir
-	*	@throws NumberFormatException() cuando el numero de telefono no es un entero
+	*	
 	*/
 	public void setTelefono(String telefono);
 	/**
 	*	introduce la descripcion del local
-	*	@param nombre String con la descripcion
+	*	@param desc 
 	*/
 	public void setDescripcion(String desc);
 	/**

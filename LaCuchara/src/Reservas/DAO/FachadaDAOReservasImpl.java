@@ -59,7 +59,7 @@ public class FachadaDAOReservasImpl implements IFachadaDAOReservas {
 
 	/**
      * Devuelve si la reserva se ha creado.
-	 * @param reserva la id de la reserva a crear.
+	 * @param r
 	 * @return reservas.create().
      */	
 
@@ -70,7 +70,7 @@ public class FachadaDAOReservasImpl implements IFachadaDAOReservas {
 
 	/**
      * Devuelve la reserva con String reserva.
-	 * @param reserva la reserva a buscar.
+	 * @param r
 	 * @return reservas.search().
      */	
 

@@ -31,13 +31,24 @@ import java.awt.Color;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
-/**
 
-This class represents the graphical user interface for creating a new reservation.
-*/
+/**
+ * Esta clase representa la interfaz de usuario para crear una nueva reserva
+ *
+ */
 public class GuiNewReserva extends JFrame {
 
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+/**
+ * contentPane de JPanel
+ */
 private JPanel contentPane;
+/**
+ * _ctrl de Controller 
+ */
 private Controller _crtl;
 
 /**

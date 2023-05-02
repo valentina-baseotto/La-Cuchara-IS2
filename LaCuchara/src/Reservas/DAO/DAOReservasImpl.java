@@ -20,20 +20,35 @@ import Reservas.Reserva;
  */
 public class DAOReservasImpl implements IDAOReserva {
 
+	/**
+	 * Una conexion a la base de datos
+	 */
 	private Connection con;
+	/**
+	 * Un objeto de declaracion SQL utilizada para ejecutar consultas en la base de datos.
+	 */
 	private Statement stmt;
+	/**
+	 * La URL de conexión a la base de datos MySQL.
+	 */
 	private String url = "jdbc:mySQL://localhost:3306/lacuchara";
+	/**
+	 * El nombre de usuario utilizado para conectarse a la base de datos.
+	 */
 	private String usuario = "LaCuchara";
+	/**
+	 * La contraseña utilizada para conectarse a la base de datos.
+	 */
 	private String pass = "LaCuchara";
 
 	/**
 	 * Constructor por defecto de la clase DAOReservasImpl que establece la conexión
 	 * con la base de datos.
 	 * 
-	 * @throws ClassNotFoundException si no se encuentra el controlador de la base
-	 *                                de datos.
-	 * @throws SQLException           si hay un error al establecer la conexión con
-	 *                                la base de datos.
+	 * 
+	 *                               
+	 * 
+	 *                                
 	 */
 	public DAOReservasImpl() {
 		try {
@@ -79,7 +94,7 @@ public class DAOReservasImpl implements IDAOReserva {
 	/**
 	 * Modifica la reserva con el id especificado en la base de datos.
 	 * 
-	 * @param id el id de la reserva a modificar.
+	 * @param reserva
 	 * @return create(reserva) si la reserva devuelve true en el delete
 	 * @return false ya que el método no está implementado.
 	 */

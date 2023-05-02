@@ -16,15 +16,32 @@ import Ofertas.Oferta;
  */
 public class DAOOfertaImpl implements IDAOOferta {
 
+	/**
+	 * La URL de conexión a la base de datos MySQL.
+	 */
 	private String url = "jdbc:mySQL://localhost:3306/lacuchara";
+	/**
+	 * El nombre de usuario utilizado para conectarse a la base de datos.
+	 */
 	private String usuario = "LaCuchara";
+	/**
+	 * La contraseña utilizada para conectarse a la base de datos.
+	 */
 	private String pass = "LaCuchara";
+	/**
+	 * Una conexión a la base de datos
+	 */
 	private Connection con;
+	/**
+	 * Un objeto de declaracion SQL utilizada para ejecutar consultas en la base de datos. 
+	 */
 	private Statement stmt;
 
 	/**
 	 * Constructor por defecto que se encarga de inicializar la conexión con la base
 	 * de datos.
+	 * 
+	 * 
 	 */
 	public DAOOfertaImpl() {
 		try {
@@ -156,7 +173,7 @@ public class DAOOfertaImpl implements IDAOOferta {
 	 * 
 	 * Modifica una oferta en la base de datos.
 	 * 
-	 * @param Oferta La oferta a modificar.
+	 * @param oferta La oferta a modificar.
 	 * 
 	 * @return true si la oferta se modificó correctamente, false si no se pudo
 	 *         modificar.

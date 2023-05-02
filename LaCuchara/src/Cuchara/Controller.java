@@ -22,14 +22,41 @@ import Usuarios.SA.IFachadaSAUsuario;
 import windows.AdminPanel;
 import windows.AppWindow;
 
+/**
+ * Esta clase es el controlador de toda la app. Es la capa de comunicacion entre las GUis y el Servicio de Aplicaciones. 
+ * 
+ *
+ */
+
 public class Controller {
 	
+	/**
+	 * usuario de IFachadaSAUsuario
+	 */
 	private IFachadaSAUsuario usuarios;
+	/**
+	 * locales de IFachadaSALocales 
+	 */
 	private IFachadaSALocales locales;
+	/**
+	 * ofertas de IFachadaSAOferta
+	 */
 	private IFachadaSAOferta ofertas;
+	/**
+	 * reservas de IFachadaSAReserva
+	 */
 	private IFachadaSAReserva reservas;
+	/**
+	 * app de AppWindow
+	 */
 	private AppWindow app;
+	/**
+	 * admin tipo boolean
+	 */
 	boolean admin = false;
+	/**
+	 * id de tipo String
+	 */
 	String id;
 
 /**
@@ -168,6 +195,11 @@ public boolean createofer(Oferta o) {
 	return ofertas.create(o);
 }
 
+/**
+ * Funcion que crea una nueva reserva
+ * @param o con la informacion de la reserva nueva que queremos intoducir en la base de datos
+ * @return true si se ha podido realizar la operacion con exito. False en caso contrario 
+ */
 public boolean createreser(Reserva o) {
 	return reservas.create(o);
 }
@@ -227,6 +259,11 @@ public boolean createreser(Reserva o) {
 			JOptionPane.showMessageDialog(new JPanel(), "Local eliminado con exito");
 	}
 
+	/**
+	 * Elimina una Oferta de la base de datos
+	 * @param l el objeto oferta que se quiere eliminar
+	 * 
+	 */
 	public void delete(Oferta l) {
 		if(!ofertas.delete(l.getID())) {
 			JOptionPane.showMessageDialog(new JPanel(), "No existe esta oferta");
@@ -235,6 +272,10 @@ public boolean createreser(Reserva o) {
 			JOptionPane.showMessageDialog(new JPanel(), "Oferta eliminada con exito");
 	}
 
+	/**
+	 * Elimina una Reserva de la base de datos 
+	 * @param l el ojbeto reserva que se quiere eliminar 
+	 */
 	public void delete(Reserva l) {
 		if(!reservas.delete(l.getID())) {
 			JOptionPane.showMessageDialog(new JPanel(), "No existe esta reserva");
@@ -257,6 +298,10 @@ public boolean createreser(Reserva o) {
 		
 	}
 
+	/**
+	 * Modifica la informacion de un local en la base de datos
+	 * @param l 
+	 */
 	public void modifyLocal(Local l){
 		if(!locales.modify(l))
 			JOptionPane.showMessageDialog(new JPanel(), "Modificacion no exitosa");
@@ -264,6 +309,10 @@ public boolean createreser(Reserva o) {
 		else
 			JOptionPane.showMessageDialog(new JPanel(), "Modificacion exitosa!");
 	}
+	/**
+	 * Modifica la informacion de un usuario en la base de datos 
+	 * @param l
+	 */
 	public void modifyUsuario(Usuario l){
 		if(!usuarios.modify(l))
 			JOptionPane.showMessageDialog(new JPanel(), "Modificacion no exitosa");
@@ -273,14 +322,28 @@ public boolean createreser(Reserva o) {
 	}
 	
 	
+	/**
+	 * Hace una consulta en la base de datos de un local a traves de su ID
+	 * @param nombre el ID del local
+	 * @return El objeto local con toda su informacion
+	 */
 	public Local consultLocal(String nombre) {
 		return locales.consult(nombre);
 	}
 	
+	/**
+	 * Hace una consulta en la base datos de un usuario a traves de su ID
+	 * @param nombre el ID del Usuario
+	 * @return El objeto Usuario con toda su informacion
+	 */
 	public Usuario consultUsuario(String nombre) {
 		return usuarios.consult(nombre);
 	}
 	
+	/**
+	 * Crea un nuevo local en la base de datos que no existia previamente.
+	 * @param local El nuevo local que se quiere introducir
+	 */
 	public void create(Local local) {
 		if(locales.create(local))
 			JOptionPane.showMessageDialog(new JPanel(), "Local creado con exito");
@@ -319,14 +382,29 @@ public boolean createreser(Reserva o) {
 		return ofertas.searchLocalLike(localStrt);
 	}
 	
+	/**
+	 * Busca unos locales que comience por las letras que le introduces 
+	 * @param local las letras que hacen el filtro 
+	 * @return Lista de Locales que cumplen con el requisito de las letras
+	 */
 	public List<Local> searchLocalLike(String local){
 		return locales.search(local);
 	}
+	/**
+	 * Busca unos usuarios que comiencen por las letras que le introduces
+	 * @param local las letras que hacen el filtro
+	 * @return Lista de Usuarios que cumplen el requisito de las letras 
+	 */
 	public List<Usuario> searchUsuarioLike(String local){
 		return usuarios.search(local);
 	}
 
 
+	/**
+	 * BUsca unas Reservas que comiencen por las mismas letra que las que has introducido 
+	 * @param local las letras
+	 * @return Lista de Reservas que cumplen el requisito. 
+	 */
 	public List<Reserva> searchReservaLike(String local){
 		return reservas.search(local);
 	}

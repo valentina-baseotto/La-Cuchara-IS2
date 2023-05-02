@@ -43,8 +43,8 @@ public class SAUsuarioImpl implements ISAUsuario {
 
 	/**
      * Devuelve el usuario con String reserva.
-	 * @param usuario el usuario a buscar.
-	 * @return reservas.search().
+	 * @param id el usuario a buscar.
+	 * 
      */	
 
 
@@ -64,8 +64,8 @@ public class SAUsuarioImpl implements ISAUsuario {
 
 	/**
      * Devuelve si el usuario se ha creado.
-	 * @param reserva la id del usuario a crear.
-	 * @return reservas.create().
+	 * @param usuario 
+	 * 
      */	
 
 	public boolean create(Usuario usuario) {
@@ -74,7 +74,7 @@ public class SAUsuarioImpl implements ISAUsuario {
 
 	/**
 	*	hace el login del nuevo usuario
-	*	@param id La id del nuevo usuario
+	*	@param nombre
 	*   @param pass la contraseña del nuevo usuario
 	*/
 
@@ -96,8 +96,8 @@ public class SAUsuarioImpl implements ISAUsuario {
 
 	/**
      * Devuelve la lista de reservas.
-	 * @orden el int del que genera la lista
-	 * @return reservas.getList().
+	 * @param orden
+	 * 
      */
 
 	@Override

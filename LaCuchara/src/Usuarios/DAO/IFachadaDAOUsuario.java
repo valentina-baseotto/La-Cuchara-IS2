@@ -28,7 +28,7 @@ public interface IFachadaDAOUsuario {
 
 	/**
      * Devuelve si el usuario se ha creado.
-	 * @param reserva la id del usuario a crear.
+	 * @param usuario
 	 * @return reservas.create().
      */	
 
@@ -60,7 +60,7 @@ public interface IFachadaDAOUsuario {
 
 	/**
      * Devuelve el usuario con String reserva.
-	 * @param usuario el usuario a buscar.
+	 * @param name
 	 * @return reservas.search().
      */	
 
@@ -68,7 +68,7 @@ public interface IFachadaDAOUsuario {
 
 	/**
      * Devuelve la lista de reservas.
-	 * @orden el int del que genera la lista
+	 * @param orden
 	 * @return reservas.getList().
      */
 

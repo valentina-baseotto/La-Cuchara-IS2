@@ -14,9 +14,9 @@ public class FachadaDAOLocalesImpl implements IFachadaDAOLocales {
 		
 		
 	/**
-	 * Obtiene una lista de locales ordenados según un criterio específico.
-	 * @param orden El criterio de ordenamiento (por ejemplo, por nombre, por fecha de creación, etc.).
-	 * @return Una lista de objetos Local ordenados según el criterio especificado.
+	 * Contructor de la clase.
+	 * 
+	 * 
 	 */
 	public FachadaDAOLocalesImpl() {
 		localesDAO = new DAOLocalesImpl();
@@ -44,7 +44,7 @@ public class FachadaDAOLocalesImpl implements IFachadaDAOLocales {
 
 	/**
 	 * Crea un nuevo local en la base de datos.
-	 * @param local El objeto Local que se va a crear.
+	 * @param Local El objeto Local que se va a crear.
 	 * @return true si el local se ha creado correctamente, false en caso contrario.
 	 */
 	@Override
@@ -64,7 +64,7 @@ public class FachadaDAOLocalesImpl implements IFachadaDAOLocales {
 
 	/**
 	 * Modifica un local existente en la base de datos.
-	 * @param local El objeto Local que se va a modificar.
+	 * @param Local El objeto Local que se va a modificar.
 	 * @return true si el local se ha modificado correctamente, false en caso contrario.
 	 */
 	@Override

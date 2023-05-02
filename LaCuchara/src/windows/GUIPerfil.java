@@ -25,15 +25,42 @@ import Reservas.Reserva;
 import Usuarios.Usuario;
 
 
+/**
+ * Esta clase hace la interfaz gráfica para mostrar la informacion del usuario
+ *
+ */
 public class GUIPerfil extends JPanel{
 
-	private JLabel nombre, usuario, contrasena, email;
-	private JPanel namePanel, userPanel, passPanel, emailPanel, middlePanel;
-	private JTextField nameText, userText, passText, emailText ;
-	private JButton confirmName, confirmUser, confirmPass, confirmEmail;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * 
+	 */
+	//private JLabel nombre, usuario, contrasena, email;
+	//private JPanel namePanel, userPanel, passPanel, emailPanel;
+	/**
+	 * middlePanel de JPanel
+	 */
+	private JPanel middlePanel;
+	//private JTextField nameText, userText, passText, emailText ;
+	//private JButton confirmName, confirmUser, confirmPass, confirmEmail;
+	/**
+	 * ctrl de Controller
+	 */
 	private Controller ctrl;
+	/**
+	 * reservas de JTable
+	 */
 	JTable reservas;
+	/**
+	 * row de integer
+	 */
 	private int row = 0;
+	/**
+	 * col de integer
+	 */
 	private int col = 0;
 
 	/**
@@ -48,7 +75,7 @@ public class GUIPerfil extends JPanel{
 	
 	/**
 	 * Crea un JPanel que contiene los campos de información del usuario y un botón de confirmación de cambios.
- 	* @return un JPanel que muestra los campos de información del usuario.
+ 	* 
  	*/
 
 	public void initGUI()

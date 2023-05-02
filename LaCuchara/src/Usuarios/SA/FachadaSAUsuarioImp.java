@@ -58,7 +58,7 @@ public class FachadaSAUsuarioImp implements IFachadaSAUsuario {
 
 	/**
      * Devuelve el usuario con la id especificada.
-	 * @param id la id del usuario a consultar.
+	 * @param usuario
 	 * @return reservas.consut().
      */	
 
@@ -90,7 +90,7 @@ public class FachadaSAUsuarioImp implements IFachadaSAUsuario {
 
 	/**
      * Devuelve la lista de reservas.
-	 * @orden el int del que genera la lista
+	 * @param orden
 	 * @return reservas.getList().
      */
 

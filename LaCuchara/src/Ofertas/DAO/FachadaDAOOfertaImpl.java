@@ -10,6 +10,9 @@ import Ofertas.Oferta;
  */
 public class FachadaDAOOfertaImpl implements IFachadaDAOOferta {
 
+	/**
+	 * OfertaDAO de IDAOOferta
+	 */
 	IDAOOferta OfertaDAO;
 
 	/**

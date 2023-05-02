@@ -40,14 +40,27 @@ Clase que define un panel que muestra una lista de locales y permite abrir la ve
 */
 
 public class ListaLocalesPanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * table de JTable 
+	 */
 	private JTable table;
+	/**
+	 * row tipo integer
+	 */
 	private int row = 0;
+	/**
+	 * col tipo integer
+	 */
 	private int col = 0;
 
 	/**
 	Crea un panel con una tabla que muestra la lista de locales recibida como parámetro y un botón para abrir la ventana de un local seleccionado.
 	@param c el controlador del programa.
-	@param locales la lista de locales a mostrar en la tabla.
+	
 	*/
 	public ListaLocalesPanel(Controller c) {
 		List<Local> _locales = c.getListLocales(0);

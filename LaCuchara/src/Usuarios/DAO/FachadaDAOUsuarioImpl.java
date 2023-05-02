@@ -51,7 +51,7 @@ public class FachadaDAOUsuarioImpl implements IFachadaDAOUsuario {
 
 	/**
      * Devuelve si el usuario se ha creado.
-	 * @param reserva la id del usuario a crear.
+	 * @param usuario
 	 * @return reservas.create().
      */	
 
@@ -95,7 +95,7 @@ public class FachadaDAOUsuarioImpl implements IFachadaDAOUsuario {
 
 	/**
      * Devuelve el usuario con String reserva.
-	 * @param usuario el usuario a buscar.
+	 * @param name
 	 * @return reservas.search().
      */	
 
@@ -107,7 +107,7 @@ public class FachadaDAOUsuarioImpl implements IFachadaDAOUsuario {
 
 	/**
      * Devuelve la lista de reservas.
-	 * @orden el int del que genera la lista
+	 * @orden orden
 	 * @return reservas.getList().
      */
 	

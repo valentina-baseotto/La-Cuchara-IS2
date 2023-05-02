@@ -15,19 +15,60 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JTextPane;
 import javax.swing.JButton;
 
+/**
+ * Esta clase genera la interfaz grafica para crear un nuevo Local.
+ *
+ */
 public class NuevoLocal extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * contentPane de JPanel
+	 */
 	private JPanel contentPane;
+	/**
+	 * textField de JTextField
+	 */
 	private JTextField textField;
+	/**
+	 * textField_1 de JTextField
+	 */
 	private JTextField textField_1;
+	/**
+	 * textField_2 de JTextField
+	 */
 	private JTextField textField_2;
+	/**
+	 * textField_3 de JTextField
+	 */
 	private JTextField textField_3;
+	/**
+	 * textField_4 de JTextField
+	 */
 	private JTextField textField_4;
+	/**
+	 * txtpnDescripcion de JTextPane
+	 */
 	private JTextPane txtpnDescripcion;
+	/**
+	 * textPane_6 de JTextPane
+	 */
 	private JTextPane textPane_6;
+	/**
+	 * txtpnUbicacion de JTextPane
+	 */
 	private JTextPane txtpnUbicacion;
+	/**
+	 * txtpnTelef de JTextPane
+	 */
 	private JTextPane txtpnTelef;
 
+	/**
+	 * Constructor de la clase. Crea el panel.
+	 */
 	public NuevoLocal(){
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 503, 494);
