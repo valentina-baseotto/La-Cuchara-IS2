@@ -14,44 +14,44 @@ public interface IFachadaDAOLocales {
 	public boolean check(String id);
 	
 	/**
-	 * Consulta un local en la base de datos.
-	 * @param id El identificador del local.
-	 * @return El objeto Local si existe en la base de datos, null en caso contrario.
-	 */
+	*	Hace una consulta en la base de datos para obtener un solo local. 
+	*	@param id del local que se quiere consultar
+	*	@return local con toda su informacion.
+	*/
 	public Local consult(String id);
 	
 	/**
-	 * Crea un nuevo local en la base de datos.
-	 * @param local El objeto Local que se va a crear.
-	 * @return true si el local se ha creado correctamente, false en caso contrario.
-	 */
+	*	Crea y añade un nuevo Local
+	*	@param local con toda la informacion nueva a introducir. 
+	*	@return true si se ha introducido correctamente. False, en el caso contrario. 
+	*/
 	public boolean create(Local local);
 	
 	/**
-	 * Elimina un local de la base de datos.
-	 * @param id El identificador del local.
-	 * @return true si el local se ha eliminado correctamente, false en caso contrario.
-	 */
+	*	Elimina un local de la base de datos. 
+	*	@param id del local que se quiere eliminar
+	*	@return true si se ha eliminado exitosamente. False, en el caso contrario. 
+	*/
 	public boolean delete(String id);
 	
 	/**
-	 * Modifica un local existente en la base de datos.
-	 * @param local El objeto Local que se va a modificar.
-	 * @return true si el local se ha modificado correctamente, false en caso contrario.
-	 */
+	*	Modifica un local que esta en la base de datos 
+	*	@param local del local que se quiere modificar con la informaion nueva
+	*	@return true si se ha modificado la informacion de un local. False, en caso contrario. 
+	*/
 	public boolean modify(Local local);
 	
 	/**
-	 * Busca locales en la base de datos por nombre.
-	 * @param name El nombre o parte del nombre de los locales que se van a buscar.
-	 * @return Una lista de objetos Local que coinciden con la búsqueda.
-	 */
+	*	Devuelve una lista con los Locales relacionados con lo que se busca
+	*	@param Local String que se quiere buscar
+	*	@return Una lista de locales que cumplen los filtros. 
+	*/
 	public List<Local> search(String name);
 	
 	/**
-	 * Obtiene una lista de locales ordenados según un criterio específico.
-	 * @param orden El criterio de ordenamiento (por ejemplo, por nombre, por fecha de creación, etc.).
-	 * @return Una lista de objetos Local ordenados según el criterio especificado.
-	 */
+	*	Devuelve una lista ordenada
+	*	@param orden tipo de orden que quiere obtener
+	*	@return lista de locales ordenados.
+	*/
 	public List<Local> getList(int orden);
 }

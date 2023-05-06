@@ -66,7 +66,7 @@ public class ListaOfertasAdmin extends JPanel {
 	private Controller _c;
 
 	/**
-	 * Constructor de la clase. Crea el panel.
+	 * Constructor de la clase. Crea el panel con una lista de ofertas
 	 * @param controller tipo Controller 
 	 */
 	public ListaOfertasAdmin(Controller controller) {

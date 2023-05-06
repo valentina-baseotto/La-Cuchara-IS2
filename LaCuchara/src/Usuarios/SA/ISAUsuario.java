@@ -6,59 +6,60 @@ import Usuarios.Usuario;
 
 public interface ISAUsuario {
 
-		/**
-     * Devuelve el usuario con String reserva.
-	 * @param usuario el usuario a buscar.
-	 * @return reservas.search().
+	/**
+     * Modifica la informacion de un usuario en la base de datos
+	 * @param usuario la informacoin del usuario con la nueva informacion 
+	 * @return true, se han modificado los datos. False, en el caso contrario.
      */	
 
 	public boolean modify(Usuario usuario);
 
-		/**
-     * Devuelve el usuario con la id especificada.
-	 * @param id la id del usuario a consultar.
-	 * @return reservas.consut().
-     */	
+	/**
+     * Devuelve el usuario con toda su informacion
+	 * @param id el identificador del usuario 
+	 * @return El objeto usuaario con toda su informacion
+     */		
 	
 	public Usuario consult(String id);
 
-		/**
-     * Devuelve si el usuario se ha eliminado.
-	 * @param id la id del usuario a eliminar.
-	 * @return reservas.delete().
+	/**
+     * Eliminar un usuario de la base de datos
+	 * @param id el id del usuario a eliminar.
+	 * @return true si se ha eliminado el usuario. False en el caso contrario.
      */
 	
 	public boolean delete(String id);
 
-		/**
-     * Devuelve si el usuario se ha creado.
-	 * @param usuario
-	 * 
-     */	
+	/**
+     * Crea un usuario nuevo que no estaba en la base de datos. 
+	 * @param usuario el nuevo usuario
+	 * @return true si se han introducido los datos correctamente. False, en el caso contrario. 
+     */
 	
 	public boolean create(Usuario usuario);
 
 	/**
-	*	hace el login del nuevo usuario
-	*	@param id La id del nuevo usuario
+	*	El iniciar sesion para un usuario que existe en la base de datos
+	*	@param nombre 
 	*   @param pass la contraseña del nuevo usuario
+	*   @return true, si se puede inicar sesion. False, en caso contrario.
 	*/
 	
 	public boolean login(String id, String pass);
 
 	/**
-     * Devuelve el usuario con String reserva.
-	 * @param nombre el usuario a buscar.
-	 * @return reservas.search().
-     */	
+     * Devuelve una lista de usuarios que cumplen con los filtros de busqueda. 
+	 * @param usuario el usuario a buscar.
+	 * @return Lista de Usuarios que cumplen los filtros
+     */
 	
 	
 	public List<Usuario> search(String nombre);
 
 	/**
-     * Devuelve la lista de reservas.
-	 * @param orden
-	 * 
+     * Devuelve una lista de usuarios ordenados
+	 * @param orden el criterio de orden
+	 * @return la lista ordenada
      */
 	
 	public List<Usuario> getList(int orden);

@@ -1,6 +1,6 @@
 package Locales;
 /**
- * Esta clase representa una interfaz Local_interface.
+ * Esta clase representa una interfaz para el objeto Local
  */
 public interface Local_interface {
 	/**

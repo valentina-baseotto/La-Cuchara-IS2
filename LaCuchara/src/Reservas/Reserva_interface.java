@@ -44,7 +44,7 @@ public interface Reserva_interface {
 	
 	/**
      * Devuelve el ID del local de la reserva.
-     * 
+     * @return el local
      */
 	
 	public String getLocal();
@@ -58,7 +58,7 @@ public interface Reserva_interface {
 	
 	/**
      * Devuelve el ID del usuario de la reserva.
-     * 
+     * @return el usuario
      */
 	
 	public String getUsuario();

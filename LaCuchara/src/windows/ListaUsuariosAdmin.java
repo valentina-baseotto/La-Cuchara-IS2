@@ -72,7 +72,7 @@ public class ListaUsuariosAdmin extends JPanel {
 
 	
 	/**
-	 * Constructor de la clase. Crea un panel.
+	 * Constructor de la clase. Crea un panel que contiene una lista de usuarios
 	 * @param controller
 	 */
 	public ListaUsuariosAdmin(Controller controller) {
@@ -287,7 +287,7 @@ public class ListaUsuariosAdmin extends JPanel {
 
 	/**
 	 * Actualiza la tabla con los datos.
-	 * @param _ofertas
+	 * @param _ofertas la lista de usuarios a representar
 	 */
 	void actualizarTabla(List<Usuario> _ofertas) {
 		DefaultTableModel dft = (DefaultTableModel) table.getModel();

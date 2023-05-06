@@ -23,7 +23,7 @@ import windows.AdminPanel;
 import windows.AppWindow;
 
 /**
- * Esta clase es el controlador de toda la app. Es la capa de comunicacion entre las GUis y el Servicio de Aplicaciones. 
+ * Esta clase es el controlador de toda la app. Es la capa de comunicacion entre las GUIs y el Servicio de Aplicaciones. 
  * 
  *
  */
@@ -147,7 +147,7 @@ public List<Reserva> searchReserva(String user){
 /**
  * Funcion para eliminar una reserva concreta
  * 
- * @param id id de la reserva a eliminar
+ * @param id la reserva a eliminar
  * */
 
 public void deleteReserva(String id) {
@@ -159,7 +159,7 @@ public void deleteReserva(String id) {
 
 /**
  * Función para modificar los datos de una oferta
- * @param o Usuario con los datos modificados
+ * @param o oferta con los datos nuevos
  */
 public void modifyOferta(Oferta o) {
 	if(ofertas.modify(o))
@@ -197,7 +197,7 @@ public boolean createofer(Oferta o) {
 
 /**
  * Funcion que crea una nueva reserva
- * @param o con la informacion de la reserva nueva que queremos intoducir en la base de datos
+ * @param o reserva con la informacion de la reserva nueva que queremos intoducir en la base de datos
  * @return true si se ha podido realizar la operacion con exito. False en caso contrario 
  */
 public boolean createreser(Reserva o) {
@@ -224,9 +224,9 @@ public boolean createreser(Reserva o) {
 	}
 	
 	/**
-	 * Función para obtener una lista de locales ordenados según un criterio específico
+	 * Función para obtener una lista de ofertas ordenados según un criterio específico
 	 * @param orden Criterio de ordenamiento
-	 * @return Lista de locales ordenados según el criterio especificado
+	 * @return Lista de ofertas ordenadas según el criterio especificado
 	 */
 		public List<Oferta> getListOfertas(int orden){
 			return ofertas.getList(orden);
@@ -300,7 +300,7 @@ public boolean createreser(Reserva o) {
 
 	/**
 	 * Modifica la informacion de un local en la base de datos
-	 * @param l 
+	 * @param l el local con la informacion nueva 
 	 */
 	public void modifyLocal(Local l){
 		if(!locales.modify(l))
@@ -311,7 +311,7 @@ public boolean createreser(Reserva o) {
 	}
 	/**
 	 * Modifica la informacion de un usuario en la base de datos 
-	 * @param l
+	 * @param l objeto tipo usuario con la información nueva
 	 */
 	public void modifyUsuario(Usuario l){
 		if(!usuarios.modify(l))

@@ -55,7 +55,7 @@ public class Usuario implements Usuario_Interface{
 	
 	@Override
 
-	/**Sets the user's name.
+	/**Poner el name como el nombre del usuario
 	* @param name el nombre
 	*/
 
@@ -63,24 +63,27 @@ public class Usuario implements Usuario_Interface{
 		_nombre = name;
 	}
 
-	/**gets the user's name.
-	*/
+	/**Devulve el nombre del usuario
+	@param _nombre 
+	 */
 
 	@Override
 	public String getName() {
 		return _nombre;
 	}
 
-	/**Sets the user's mail.
-		* @param mail el mail
-	*/
+	/**Pone ese mail se pone como el mail del ususario
+	* @param mail el mail
+*/
 
 	@Override
 	public void setMail(String mail) {
 		_mail = mail;
 	}
 
-	/**gets the user's mail.	
+	/**Devuelve el mail del usuario
+	 * @param _mail 
+	
 	*/
 
 	@Override
@@ -88,16 +91,17 @@ public class Usuario implements Usuario_Interface{
 		return _mail;
 	}
 
-	/**Sets the user's ID.
-		* @param ID la id
-	*/
+	/**Pone el ID como el ID del usuario
+	* @param ID 
+*/
 
 	@Override
 	public void setID(String ID) {
 		_ID = ID;
 	}
 
-	/**gets the user's ID.
+	/**Devuelve el _id del usuario
+	 * @param _id
 	*/
 
 	@Override
@@ -105,16 +109,17 @@ public class Usuario implements Usuario_Interface{
 		return _ID;
 	}
 
-	/**Sets the user's phone.
-		* @param phone  el telefono
-	*/
+	/**Pone el phone como el telefono del usuario
+	* @param phone el telefono 
+*/
 
 	@Override
 	public void setPhone(int phone) {
 		_movil = phone;
 	}
 
-	/**gets the user's phone.
+	/**Devuelve el telefono del usuario. 
+	 * @return _phone
 	*/
 
 	@Override
@@ -122,9 +127,9 @@ public class Usuario implements Usuario_Interface{
 		return _movil;
 	}
 
-	/**Sets the user's pass.
-		* @param pass la contrasenia
-	*/
+	/**Asigna la contraseña al usuario.
+	* @param pass la contrasenia
+*/
 
 	@Override
 	public void setPass(String pass) {
@@ -132,7 +137,8 @@ public class Usuario implements Usuario_Interface{
 		
 	}
 
-	/**gets the user's pass.
+	/**Devuelve la contraseña del usuario
+	 * @return la contraseña del usuario
 	*/
 
 	@Override

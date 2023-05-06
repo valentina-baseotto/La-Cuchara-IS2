@@ -52,10 +52,10 @@ public DAOUsuariosImpl() {
 }
 
 /**
- * Comprueba si existe un usuario en la base de datos con el ID especificado.
- * @param id el ID del usuario a comprobar.
- * @return true si existe un usuario en la base de datos con el ID especificado, false en caso contrario.
- */
+ * devuelve el usuario que se ha querido comprobar
+ * @param id la id del usuario a comprobar
+ * @return true, si el id coincide con un usuario de la base de datos. False, en caso contrario.
+*/
 public boolean check(String id) {
 	try {
 		con = DriverManager.getConnection(url, usuario, pass);
@@ -77,9 +77,9 @@ public boolean check(String id) {
 }
 
 /**
- * Consulta un usuario existente en la base de datos con el ID especificado.
- * @param id el ID del usuario a consultar.
- * @return un objeto Usuario con los datos del usuario consultado, o null si no se encontró ningún usuario con el ID especificado.
+ * Hace una consulta en la base de datos para un solo usuario. 
+ * @param id la id del usuario a consultar.
+ * @return el usuario con toda su informacion
  */
 public Usuario consult(String id) {
 	Usuario usu = null;
@@ -107,9 +107,9 @@ public Usuario consult(String id) {
 }
 
 /**
- * Crea un nuevo usuario en la base de datos.
- * @param user el objeto Usuario que contiene los datos del usuario a crear.
- * @return true si el usuario fue creado exitosamente, false si ya existe un usuario en la base de datos con el mismo ID.
+ * Crea un nuevo usuario en la base de datos. 
+ * @param usuario el objeto que se quiere introducir en la base de datos. 
+ * @return True si se han introducido los datos. False, en caso contrario. 
  */
 public boolean create(Usuario user) {
 	if(!check(user.getID())) {
@@ -138,10 +138,10 @@ public boolean create(Usuario user) {
 	}
 
 /**
-Método que permite autenticar a un usuario en la base de datos.
-@param id Identificador del usuario.
-@param pass Contraseña del usuario.
-@return true si el usuario ha sido autenticado correctamente, false en caso contrario.
+*	Inicia sesion en la aplicaion. 
+*	@param id La id del nuevo usuario
+*   @param pass la contraseña del nuevo usuario
+*   @return true si el id y el pass es del mismo usuario existen en la base de datos. False, en caso contrario. 
 */
 
 	public boolean login(String id, String pass) {
@@ -167,10 +167,10 @@ Método que permite autenticar a un usuario en la base de datos.
 	}
 
 	/**
-	Método que permite eliminar un usuario de la base de datos.
-@param id Identificador del usuario a eliminar.
-@return true si el usuario ha sido eliminado correctamente, false en caso contrario.
-*/
+     *	Elimina un usuario de la base de datos
+	 * @param id la id del usuario a eliminar.
+	 * @return true, si se ha eliminado el usuario. False, en el caso contrario. 
+     */
 
 	public boolean delete(String id) {
 		if(check(id)) {
@@ -193,10 +193,10 @@ Método que permite autenticar a un usuario en la base de datos.
 	}
 
 	/**
-Método que permite modificar un usuario de la base de datos.
-@param usuario Objeto Usuario con los datos actualizados del usuario a modificar.
-@return true si el usuario ha sido modificado correctamente, false en caso contrario.
-*/
+     * Modifica un usuario en la base de datos. 
+	 * @param usuario el usuario a modificar con la nueva informacion.
+	 * @return true, si se han introducido los nuevos datos. False, en el caso contrario. 
+     */	
 
 	public boolean modify(Usuario usuario) {
 		if(check(usuario.getID())) {
@@ -220,11 +220,10 @@ Método que permite modificar un usuario de la base de datos.
 	}
 
 	/**
-
-Método que permite buscar usuarios en la base de datos por su nombre.
-@param name Nombre de usuario a buscar.
-@return Lista de objetos Usuario que coinciden con el nombre proporcionado, o null si no se encontraron usuarios.
-*/
+     * Devuelve una lista de Usuarios que cumplen con los filtros. 
+	 * @param name
+	 * @return La lista de usuarios que cumplen con los filtros.
+     */	
 
 	public List<Usuario> search(String name) {
 		boolean ok= false;
@@ -253,10 +252,10 @@ Método que permite buscar usuarios en la base de datos por su nombre.
 	}
 
 	/**
-	Retrieves a list of users from the database.
-	@param orden an integer representing the desired order of the results
-	@return a List of Usuario objects containing the results of the query, or null if an error occurs
-	*/
+     * Devuelve la lista de usuario ordenados. 
+	 * @param orden el criterio para ordenar
+	 * @return la lista ordenada.
+     */
 
 	
 	public List<Usuario> getList(int orden) {

@@ -71,7 +71,7 @@ public class ListaReservasAdmin extends JPanel {
 
 	
 	/**
-	 * Constructor de la clase. Crea el panel.
+	 * Constructor de la clase. Crea el panel, nuestra una lista de reservas.
 	 * @param controller
 	 */
 	public ListaReservasAdmin(Controller controller) {
@@ -324,7 +324,7 @@ public class ListaReservasAdmin extends JPanel {
 
 	/**
 	 * Actualiza la tabla con los datos.
-	 * @param _ofertas
+	 * @param _ofertas lista de reservas a mostrar
 	 */
 	void actualizarTabla(List<Reserva> _ofertas){
 		DefaultTableModel dft = (DefaultTableModel) table.getModel();

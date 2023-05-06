@@ -27,9 +27,9 @@ public class FachadaSAReservaImp implements IFachadaSAReserva {
 	}
 
 	/**
-     * Devuelve si la reserva se ha modificado.
-	 * @param id la id de la reserva a modificar
-	 * @return SAReservas.modify().
+     * Modifica una reserva en la base de datos. 
+     * @param id la Reserva con la info nueva 
+	 * @return true si se han introducido la informacion nueva. False, en el caso contrario. 
      */
 
 	public boolean modify(Reserva id) {
@@ -37,19 +37,19 @@ public class FachadaSAReservaImp implements IFachadaSAReserva {
 	}
 
 	/**
-     * Devuelve la reserva con la id especificada.
+     * Hace una consulta en la base de datos por el id de la reserva 
 	 * @param id la id de la reserva a consultar.
-	 * @return SAReservas.consut().
-     */	
+	 * @return la reserva con toda su informacion.
+     */
 
 	public Reserva consult(String id) {
 		return SAReserva.consult(id);
 	}
 
 	/**
-     * Devuelve si la reserva se ha eliminado.
+     * Borra la informacion de la base de datos.
 	 * @param id la id de la reserva a eliminar.
-	 * @return SAReservas.delete().
+	 * @return true, si se ha eliminado la informacion de la reserva. False en el caso contrario.
      */	
 
 	public boolean delete(String id) {
@@ -57,9 +57,9 @@ public class FachadaSAReservaImp implements IFachadaSAReserva {
 	}
 
 	/**
-     * Devuelve si la reserva se ha creado.
-	 * @param r la id de la reserva a crear.
-	 * @return SAReservas.create().
+     * Crea una nueva reserva en la base de datos. 
+	 * @param r Con toda la informacion nueva a la base de datos 
+	 * @return true, si se han introducido la informacion nueva. false en el caso contrario. 
      */
 
 	public boolean create(Reserva r) {
@@ -67,10 +67,10 @@ public class FachadaSAReservaImp implements IFachadaSAReserva {
 	}
 
 	/**
-     * Devuelve la reserva con String reserva.
-	 * @param r la reserva a buscar.
-	 * @return SAReservas.search().
-     */	
+     * Devuelve una lista de reservas que cumplen un criterio.
+	 * @param r el filtro de busqueda. 
+	 * @return Las reservas que cumplen los criterios. 
+     */
 	
 	@Override
 	public List<Reserva> search(String r) {
@@ -78,8 +78,9 @@ public class FachadaSAReservaImp implements IFachadaSAReserva {
 	}
 
 	/**
-     * Devuelve la lista de reservas.
-	 * @return reservas.getList().
+     * Devuelve la lista de reservas ordenadas. 
+	 *@param orden El criterio de orden 
+	 *@return Lista de reservas ordenada 
      */
 
 

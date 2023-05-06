@@ -64,7 +64,7 @@ public class GUIPerfil extends JPanel{
 	private int col = 0;
 
 	/**
-	* Crea un objeto GUIPerfil.
+	* Constructor de la clase. Crea un objeto GUIPerfil.
 	* @param ctrl un objeto Controller que contiene información del usuario actual.
 	*/
 

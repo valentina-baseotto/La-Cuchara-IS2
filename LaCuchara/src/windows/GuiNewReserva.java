@@ -53,11 +53,11 @@ private Controller _crtl;
 
 /**
 
-Constructs a new GuiNewReserva object.
+Constructor de la clase. Crea el frame en el cual se puede hacer una nueva reserva
 
-@param ctrl the Controller object used to handle the user input
+@param ctrl El controlador del programa
 
-@param local the local where the reservation is made
+@param local El local donde queremos reservar 
 */
 	public GuiNewReserva(Controller ctrl, String local) {
 		_crtl = ctrl;

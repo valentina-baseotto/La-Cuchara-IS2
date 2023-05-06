@@ -28,8 +28,8 @@ import Exceptions.NullException;
 import Usuarios.Usuario;
 
 /**
+Esta clase representa la interfaz grafica para iniciaar sesion en la app
 
-This class represents the graphical user interface for Login.
 */
 
 public class LoginWindow extends JFrame {
@@ -56,7 +56,7 @@ public class LoginWindow extends JFrame {
 		initGUI();
 	}
 	/**
-	 * Crea el panel para mostrar la informacion del local en cuestion.
+	 * Constructor. Crea el panel para mostrar la informacion del local en cuestion.
 	 * @param controller el controlador del programa.
 	 */
 
@@ -94,7 +94,8 @@ public class LoginWindow extends JFrame {
 	}
 	
 	/**
-	* inicicializa el registro y comprueba la informacion 
+	* Inicializa el registro y comprueba la informacion 
+	* @return El panel para registrar un nuevo usuario
 	*/
 
 	private JPanel initRegister() {
@@ -197,6 +198,7 @@ public class LoginWindow extends JFrame {
 
 	/**
 	* Inicializa el Frame y el Panel para el login
+	* @return Panel para iniciar sesion
 	*/
 	
 	public JPanel initLogin() {

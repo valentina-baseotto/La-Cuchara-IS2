@@ -15,8 +15,9 @@ public class LaCuchara {
 	/**
 	 * El método main en el punto de entrada de la aplicacion. Crea un objeto de la clase SAOfertaImpl y un objeto de la clase Controller,
 	 * y abre la ventana de inicio de sesion de la aplicacion. 
-	 * @param args
+	 * @param args parametro default del main
 	 */
+	
 	public static void main(String[] args) {
 		Controller controller = new Controller();
 		LoginWindow login = new LoginWindow(controller);

@@ -30,8 +30,8 @@ public class FachadaDAOUsuarioImpl implements IFachadaDAOUsuario {
 	/**
      * devuelve el usuario que se ha querido comprobar
 	 * @param id la id del usuario a comprobar
-	* @return usuariosDAO.check()
-     */
+	 * @return true, si el id coincide con un usuario de la base de datos. False, en caso contrario.
+    */
 	
 	@Override
 	public boolean check(String id) {
@@ -39,10 +39,10 @@ public class FachadaDAOUsuarioImpl implements IFachadaDAOUsuario {
 	}
 
 	/**
-     * Devuelve el usuario con la id especificada.
+     * Hace una consulta en la base de datos para un solo usuario. 
 	 * @param id la id del usuario a consultar.
-	 * @return reservas.consut().
-     */	
+	 * @return el usuario con toda su informacion
+     */
 
 	@Override
 	public Usuario consult(String id) {
@@ -50,9 +50,9 @@ public class FachadaDAOUsuarioImpl implements IFachadaDAOUsuario {
 	}
 
 	/**
-     * Devuelve si el usuario se ha creado.
-	 * @param usuario
-	 * @return reservas.create().
+     * Crea un nuevo usuario en la base de datos. 
+	 * @param usuario el objeto que se quiere introducir en la base de datos. 
+	 * @return True si se han introducido los datos. False, en caso contrario. 
      */	
 
 	@Override
@@ -61,9 +61,10 @@ public class FachadaDAOUsuarioImpl implements IFachadaDAOUsuario {
 	}
 
 	/**
-	*	hace el login del nuevo usuario
+	*	Inicia sesion en la aplicaion. 
 	*	@param id La id del nuevo usuario
 	*   @param pass la contraseña del nuevo usuario
+	*   @return true si el id y el pass es del mismo usuario existen en la base de datos. False, en caso contrario. 
 	*/
 
 	@Override
@@ -72,10 +73,10 @@ public class FachadaDAOUsuarioImpl implements IFachadaDAOUsuario {
 	}
 
 	/**
-     * Devuelve si el usuario se ha eliminado.
+     *	Elimina un usuario de la base de datos
 	 * @param id la id del usuario a eliminar.
-	 * @return reservas.delete().
-     */	
+	 * @return true, si se ha eliminado el usuario. False, en el caso contrario. 
+     */
 
 	@Override
 	public boolean delete(String id) {
@@ -83,9 +84,9 @@ public class FachadaDAOUsuarioImpl implements IFachadaDAOUsuario {
 	}
 
 	/**
-     * Devuelve si el usuario se ha modificado.
-	 * @param usuario el usuario a modificar
-	 * @return reservas.modify().
+     * Modifica un usuario en la base de datos. 
+	 * @param usuario el usuario a modificar con la nueva informacion.
+	 * @return true, si se han introducido los nuevos datos. False, en el caso contrario. 
      */	
 
 	@Override
@@ -94,9 +95,9 @@ public class FachadaDAOUsuarioImpl implements IFachadaDAOUsuario {
 	}
 
 	/**
-     * Devuelve el usuario con String reserva.
+     * Devuelve una lista de Usuarios que cumplen con los filtros. 
 	 * @param name
-	 * @return reservas.search().
+	 * @return La lista de usuarios que cumplen con los filtros.
      */	
 
 
@@ -106,9 +107,9 @@ public class FachadaDAOUsuarioImpl implements IFachadaDAOUsuario {
 	}
 
 	/**
-     * Devuelve la lista de reservas.
-	 * @orden orden
-	 * @return reservas.getList().
+     * Devuelve la lista de usuario ordenados. 
+	 * @param orden el criterio para ordenar
+	 * @return la lista ordenada.
      */
 	
 	@Override

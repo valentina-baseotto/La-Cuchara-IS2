@@ -92,12 +92,10 @@ public class DAOReservasImpl implements IDAOReserva {
 	}
 
 	/**
-	 * Modifica la reserva con el id especificado en la base de datos.
-	 * 
-	 * @param reserva
-	 * @return create(reserva) si la reserva devuelve true en el delete
-	 * @return false ya que el método no está implementado.
-	 */
+     * Modifica una reserva en la base de datos. 
+     * @param id la Reserva con la info nueva 
+	 * @return true si se han introducido la informacion nueva. False, en el caso contrario. 
+     */
 	public boolean modify(Reserva reserva) {
 		if(check(reserva.getID())) {
 			try {
@@ -122,12 +120,10 @@ public class DAOReservasImpl implements IDAOReserva {
 	}
 
 	/**
-	 * Consulta la reserva con el id especificado en la base de datos.
-	 * 
-	 * @param id el id de la reserva a consultar.
-	 * @return reserva si el id de la reserva se encuentra en la base de datos
-	 * @return null en el caso contrario.
-	 */
+     * Hace una consulta en la base de datos por el id de la reserva 
+	 * @param id la id de la reserva a consultar.
+	 * @return la reserva con toda su informacion.
+     */
 	public Reserva consult(String id) {
 		Reserva reserva = null;
 		if (check(id)) {
@@ -152,11 +148,10 @@ public class DAOReservasImpl implements IDAOReserva {
 	}
 
 	/**
-	 * Elimina la reserva con el id especificado de la base de datos.
-	 * 
-	 * @param id el id de la reserva a eliminar.
-	 * elimina el valor de la base de datos 
-	 */
+     * Borra la informacion de la base de datos.
+	 * @param id la id de la reserva a eliminar.
+	 * @return true, si se ha eliminado la informacion de la reserva. False en el caso contrario.
+     */	
 	public boolean delete(String id) {
 		if (check(id)) {
 			try {
@@ -176,11 +171,10 @@ public class DAOReservasImpl implements IDAOReserva {
 	}
 
 	/**
-	 * Crea una nueva reserva en la base de datos.
-	 * 
-	 * @param r la reserva a crear.
-	 * @return false ya que el método no está implementado.
-	 */
+     * Crea una nueva reserva en la base de datos. 
+	 * @param r Con toda la informacion nueva a la base de datos 
+	 * @return true, si se han introducido la informacion nueva. false en el caso contrario. 
+     */
 	public boolean create(Reserva r) {
 		if (!check(r.getID())) {
 			try {
@@ -207,11 +201,10 @@ public class DAOReservasImpl implements IDAOReserva {
 	}
 
 	/**
-	 * Busca reservas en la base de datos según el criterio especificado
-	 * 
-	 * @param r la reserva a buscar.
-	 * @return false ya que el método no está implementado.
-	 */
+     * Devuelve una lista de reservas que cumplen un criterio.
+	 * @param r el filtro de busqueda. 
+	 * @return Las reservas que cumplen los criterios. 
+     */
 
 	public List<Reserva> search(String r) {
 		boolean ok= false;
@@ -241,11 +234,10 @@ public class DAOReservasImpl implements IDAOReserva {
 	}
 
 	/**
-	 * obtiene la lista de reservas en la base de datos según el criterio
-	 * especificado
-	 * 
-	 * @return la lista de reservas.
-	 */
+     * Devuelve la lista de reservas ordenadas. 
+	 *@param orden El criterio de orden 
+	 *@return Lista de reservas ordenada 
+     */
 
 	public List<Reserva> getList(int orden) {
 		List<Reserva> lista = new ArrayList<Reserva>();

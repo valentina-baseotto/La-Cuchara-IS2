@@ -109,7 +109,7 @@ public class Reserva implements Reserva_interface {
 
 	/**
      * Devuelve el ID de la Reserva.
-     * 
+     * @return _ID
 	 */
 
 	public String getID() {
@@ -127,7 +127,7 @@ public class Reserva implements Reserva_interface {
 	
 	/**
 	 * Devuelve la fecha
-	 * 
+	 * @return el usuario
 	 */
 	public String getFecha(){
 		return fecha;

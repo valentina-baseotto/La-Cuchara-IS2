@@ -68,7 +68,7 @@ public class ListaLocalesAdmin extends JPanel {
 
 	/**
 	 * Constructor de la clase. 
-	 * @param controller Tipo Controller 
+	 * @param controller Controlador de la app
 	 */
 	public ListaLocalesAdmin(Controller controller) {
 		_c = controller;
@@ -281,7 +281,7 @@ public class ListaLocalesAdmin extends JPanel {
 
 	/**
 	 * Actualiza la tabla con los datos 
-	 * @param _Local
+	 * @param _Local los datos del local a mostrar
 	 */
 	void actualizarTabla(List<Local> _Local){
 		DefaultTableModel dft = (DefaultTableModel) table.getModel();

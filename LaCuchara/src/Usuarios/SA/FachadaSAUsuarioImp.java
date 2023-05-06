@@ -26,40 +26,40 @@ public class FachadaSAUsuarioImp implements IFachadaSAUsuario {
 	}
 
 	/**
-     * Devuelve si el usuario se ha modificado.
-	 * @param usuario el usuario a modificar
-	 * @return reservas.modify().
-     */	
+     * Modifica la informacion de un usuario en la base de datos
+	 * @param usuario la informacoin del usuario con la nueva informacion 
+	 * @return true, se han modificado los datos. False, en el caso contrario.
+     */
 
 	public boolean modify(Usuario usuario) {
 
 		return SAUsuario.modify(usuario);
 	}
 
-	/**
-     * Devuelve el usuario con la id especificada.
-	 * @param id la id del usuario a consultar.
-	 * @return reservas.consut().
-     */	
+ 	/**
+      * Devuelve el usuario con toda su informacion
+ 	 * @param id el identificador del usuario 
+ 	 * @return El objeto usuaario con toda su informacion
+      */	
 
 	public Usuario consult(String id) {
 		return SAUsuario.consult(id);
 	}
 
 	/**
-     * Devuelve si el usuario se ha eliminado.
-	 * @param id la id del usuario a eliminar.
-	 * @return reservas.delete().
-     */	
+     * Eliminar un usuario de la base de datos
+	 * @param id el id del usuario a eliminar.
+	 * @return true si se ha eliminado el usuario. False en el caso contrario.
+     */
 
 	public boolean delete(String id) {
 		return SAUsuario.delete(id);
 	}
 
 	/**
-     * Devuelve el usuario con la id especificada.
-	 * @param usuario
-	 * @return reservas.consut().
+     * Crea un usuario nuevo que no estaba en la base de datos. 
+	 * @param usuario el nuevo usuario
+	 * @return true si se han introducido los datos correctamente. False, en el caso contrario. 
      */	
 
 	public boolean create(Usuario usuario) {
@@ -67,9 +67,10 @@ public class FachadaSAUsuarioImp implements IFachadaSAUsuario {
 	}
 
 	/**
-	*	hace el login del nuevo usuario
-	*	@param id La id del nuevo usuario
+	*	El iniciar sesion para un usuario que existe en la base de datos
+	*	@param nombre 
 	*   @param pass la contraseña del nuevo usuario
+	*   @return true, si se puede inicar sesion. False, en caso contrario.
 	*/
 
 	@Override
@@ -78,10 +79,10 @@ public class FachadaSAUsuarioImp implements IFachadaSAUsuario {
 	}
 
 	/**
-     * Devuelve el usuario con String reserva.
+     * Devuelve una lista de usuarios que cumplen con los filtros de busqueda. 
 	 * @param usuario el usuario a buscar.
-	 * @return reservas.search().
-     */	
+	 * @return Lista de Usuarios que cumplen los filtros
+     */
 
 	@Override
 	public List<Usuario> search(String usuario) {
@@ -89,9 +90,9 @@ public class FachadaSAUsuarioImp implements IFachadaSAUsuario {
 	}
 
 	/**
-     * Devuelve la lista de reservas.
-	 * @param orden
-	 * @return reservas.getList().
+     * Devuelve una lista de usuarios ordenados
+	 * @param orden el criterio de orden
+	 * @return la lista ordenada
      */
 
 	@Override

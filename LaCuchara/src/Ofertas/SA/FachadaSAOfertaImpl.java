@@ -70,7 +70,7 @@ public class FachadaSAOfertaImpl implements IFachadaSAOferta {
 	}
 
 	/**
-	 *Metodo para ordenar la lista
+	 *Metodo para ordenar la lista de ofertas 
 	 *@param orden 
 	 *@return la lista de ofertas ordenada
 	 */
@@ -89,9 +89,12 @@ public class FachadaSAOfertaImpl implements IFachadaSAOferta {
 		return oferta.check(id);
 	}
 	/**
-	 *Busca ofertas que cumplen el filtro de busqueda siendo este una letras.
-	 *@param localStrt las letras que hacen de filtro
-	 *@return Lista de Ofertas que cumplen el requisito. 
+	 * 
+	 * Busca ofertas en la base de datos cuyo local empiece por localStrt.
+	 *
+	 * @param localStrt string que sirve para hacer la busqueda.
+	 * 
+	 * @return Una lista de ofertas que empiecen por localStrt.
 	 */
 	@Override
 	public List<Oferta> searchLocalLike(String localStrt){

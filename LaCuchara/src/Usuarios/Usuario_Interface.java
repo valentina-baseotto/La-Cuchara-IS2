@@ -5,50 +5,54 @@ package Usuarios;
  *
  */
 public interface Usuario_Interface {
-	/**Sets the user's name.
+	/**Poner el name como el nombre del usuario
 	* @param name el nombre
 	*/
 	public void setName(String name);
 	
-	/**gets the user's name.
-		
+	/**Devulve el nombre del usuario
+		@param _nombre 
 	*/
 	public String getName();
 	
-	/**Sets the user's mail.
+	/**Pone ese mail se pone como el mail del ususario
 		* @param mail el mail
 	*/
 	public void setMail(String mail);
 	
-	/**gets the user's mail.
+	/**Devuelve el mail del usuario
+	 * @param _mail 
 	
 	*/
 	public String getMail();
 	
-	/**Sets the user's ID.
-		* @param ID la id
+	/**Pone el ID como el ID del usuario
+		* @param ID 
 	*/
 	public void setID(String ID);
 	
-	/**gets the user's ID.
+	/**Devuelve el _id del usuario
+	 * @param _id
 	*/
 	public String getID();
 	
-	/**Sets the user's phone.
-		* @param phone  el telefono
+	/**Pone el phone como el telefono del usuario
+		* @param phone el telefono 
 	*/
 	public void setPhone(int phone);
 	
-	/**gets the user's phone.
+	/**Devuelve el telefono del usuario. 
+	 * @return _phone
 	*/
 	public int getPhone();
 	
-	/**Sets the user's pass.
+	/**Asigna la contraseña al usuario.
 		* @param pass la contrasenia
 	*/
 	public void setPass(String pass);
 	
-	/**gets the user's pass.
+	/**Devuelve la contraseña del usuario
+	 * @return la contraseña del usuario
 	*/
 	public String getPass();
 
