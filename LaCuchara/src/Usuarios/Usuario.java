@@ -64,7 +64,6 @@ public class Usuario implements Usuario_Interface{
 	}
 
 	/**Devulve el nombre del usuario
-	@param _nombre 
 	 */
 
 	@Override
@@ -82,7 +81,7 @@ public class Usuario implements Usuario_Interface{
 	}
 
 	/**Devuelve el mail del usuario
-	 * @param _mail 
+	 * 
 	
 	*/
 

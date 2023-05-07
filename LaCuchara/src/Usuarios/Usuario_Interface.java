@@ -11,7 +11,7 @@ public interface Usuario_Interface {
 	public void setName(String name);
 	
 	/**Devulve el nombre del usuario
-		@param _nombre 
+		@return _nombre el nombre
 	*/
 	public String getName();
 	
@@ -21,7 +21,7 @@ public interface Usuario_Interface {
 	public void setMail(String mail);
 	
 	/**Devuelve el mail del usuario
-	 * @param _mail 
+	 * @return mail el correo
 	
 	*/
 	public String getMail();
@@ -32,7 +32,6 @@ public interface Usuario_Interface {
 	public void setID(String ID);
 	
 	/**Devuelve el _id del usuario
-	 * @param _id
 	*/
 	public String getID();
 	
